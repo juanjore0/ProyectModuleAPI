@@ -12,4 +12,11 @@ def request_deparment():
 
 def show_data(data):
     """"display the data"""
-    print(data)
+    renamed_df = data.rename(columns={ 
+        "ciudad_municipio_nom": " Ciudad ", 
+        "departamento_nom": " Departamento ", 
+        "edad" : "edad", 
+        "fuente_tipo_contagio": "Tipo de Contagio", 
+        "estado": "Estado", 
+        "recuperado": "Recuperado" })
+    print(renamed_df)
