@@ -12,11 +12,11 @@ def get_data(number, department, client):
 
 def convert_dataframe(data):
     """Convert the data to a DataFrame"""
-    pd.set_option('display.max_rows', None)
-    pd.set_option('display.max_columns', None)
     return pd.DataFrame.from_records(data)
 
 def format_df(data):
     """Format the DataFrame"""
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.max_columns', None)
     list_data = ["ciudad_municipio_nom", "departamento_nom", "edad", "sexo", "estado", "fuente_tipo_contagio"]
     return data[list_data]
